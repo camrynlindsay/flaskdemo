@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <p>This is the home page. It's not exciting yet...</p>
+    <h1>Welcome to the Wikipedia Search App!</h1>
+    <p>This is a simple application that allows you to search for information on Wikipedia.</p>
+    <p>Feel free to enter a topic in the search bar and discover interesting facts!</p>
+
+    <form action="{{ url_for('search') }}" method="post">
+        <label for="search">Enter your search:</label>
+        <input type="text" id="search" name="search" required>
+        <button type="submit">Search</button>
+    </form>
 {% endblock %}
